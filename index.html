@@ -311,7 +311,7 @@ function searchEmp(val) {
   var m = EMP.filter(function(e){ return e.name.toLowerCase().indexOf(q) >= 0 || e.Code.indexOf(q) >= 0; }).slice(0,12);
   if(!m.length) { dd.className='dropdown'; return; }
   dd.innerHTML = m.map(function(e){
-    return '<div class="drop-item" onclick="pickEmp(''+e.Code+'')"><div class="drop-avatar">'+e.name.charAt(0)+'</div><div><div class="drop-name">'+e.name+'</div><div class="drop-meta">'+e.Code+' · '+e.dept.substring(0,35)+'</div></div></div>';
+    return '<div class="drop-item" onclick="pickEmp(\''+e.Code+'\')"><div class="drop-avatar">'+e.name.charAt(0)+'</div><div><div class="drop-name">'+e.name+'</div><div class="drop-meta">'+e.Code+' · '+e.dept.substring(0,35)+'</div></div></div>';
   }).join('');
   dd.className = 'dropdown show';
 }
