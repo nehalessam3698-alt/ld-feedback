@@ -71,6 +71,7 @@
 <div class="fg"><label>Employee Code</label><input type="text" id="fc" readonly placeholder="Auto-filled"></div>
 <div class="fg"><label>Department</label><input type="text" id="fd" readonly placeholder="Auto-filled"></div>
 <div class="sdv">Training Details</div>
+<div class="fg"><label>Session Name</label><input type="text" id="fsession" placeholder="e.g. Induction Day 1 – 4th Floor" maxlength="100"></div>
 <div class="fg"><label>Training Program *</label><select id="fp"><option value="">-- Select Program --</option><option>Induction</option><option>Project Knowledge</option><option>Project Refresher</option><option>Technical Training</option><option>Leadership Development</option><option>Sales Excellence</option><option>Customer Service Skills</option><option>Onboarding Program</option><option>Soft Skills &amp; Communication</option><option>Compliance &amp; Policy Training</option><option>Digital Tools &amp; Systems</option><option>Health &amp; Safety</option><option>Other</option></select></div>
 <div class="fg"><label>Trainer Name *</label><select id="ft"><option value="">-- Select Trainer --</option><option>Anil</option><option>Nehal</option><option>Chahinaz</option><option>Hania</option><option>Varun</option></select></div>
 <div class="fg"><label>Delivery Method *</label><select id="fm"><option value="">-- Select Method --</option><option>In-Person / Classroom</option><option>Online / Virtual</option><option>Blended (In-Person + Online)</option><option>On-the-Job / Coaching</option><option>Self-Paced / eLearning</option></select></div>
@@ -159,7 +160,15 @@ function doSubmit(){
   for(var i=0;i<5;i++){if(!RR[i]){showErr("Please complete all star ratings.");return;}}
   var btn=document.getElementById("subbtn");
   btn.disabled=true;btn.textContent="Submitting...";
-  var d={time:new Date().toLocaleString(),name:emp.name,code:emp.Code,dept:emp.dept,
+  var now=new Date();
+  var dd=String(now.getDate()).padStart(2,'0');
+  var mm=String(now.getMonth()+1).padStart(2,'0');
+  var yy=String(now.getFullYear()).slice(-2);
+  var hh=String(now.getHours()).padStart(2,'0');
+  var mn=String(now.getMinutes()).padStart(2,'0');
+  var ts=dd+'/'+mm+'/'+yy+' '+hh+':'+mn;
+  var d={time:ts,name:emp.name,code:emp.Code,dept:emp.dept,
+    session:document.getElementById("fsession").value,
     program:document.getElementById("fp").value,trainer:document.getElementById("ft").value,
     method:document.getElementById("fm").value,
     overall:RR[0],trainerRating:RR[1],content:RR[2],materials:RR[3],pace:RR[4]};
@@ -172,7 +181,7 @@ function done(btn){
   btn.textContent="Submit Training Feedback";
   setTimeout(function(){
     ob.className="okbanner";btn.disabled=false;emp=null;
-    ["fn","fc","fd","fp","ft","fm"].forEach(function(id){document.getElementById(id).value="";});
+    ["fn","fc","fd","fp","ft","fm","fsession"].forEach(function(id){document.getElementById(id).value="";});
     document.getElementById("srch").value="";document.getElementById("selbox").className="selbox";
     RR=[0,0,0,0,0];document.querySelectorAll(".star").forEach(function(s){s.className="star";});
     for(var i=0;i<5;i++){var l=document.getElementById("sl"+i);if(l)l.textContent="";}
