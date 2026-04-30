@@ -154,6 +154,7 @@ function showErr(msg){
 
 function doSubmit(){
   if(!emp){showErr("Please search and select your name.");return;}
+  if(!document.getElementById("fsession").value.trim()){showErr("Please enter the Session Name.");return;}
   if(!document.getElementById("fp").value){showErr("Please select a Training Program.");return;}
   if(!document.getElementById("ft").value){showErr("Please select a Trainer Name.");return;}
   if(!document.getElementById("fm").value){showErr("Please select a Delivery Method.");return;}
