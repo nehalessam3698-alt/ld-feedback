@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L&D Training Satisfaction - Samana</title>
+<title>L&D Training Satisfaction</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0e1a;--card:#1a2235;--border:#2a3650;--accent:#3b82f6;--accent2:#06b6d4;--green:#10b981;--text:#f1f5f9;--muted:#64748b;--surface:#111827;}
@@ -60,15 +60,15 @@
 .empty{text-align:center;padding:48px;color:var(--muted);}.loading{text-align:center;padding:36px;color:var(--muted);font-size:13px;}
 ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
 </style></head><body>
-<div class="hdr"><div><div class="brand">SAMANA</div><div class="sub">Learning &amp; Development</div></div>
+<div class="hdr"><div><div class="brand">L&amp;D Training</div><div class="sub">Learning &amp; Development</div></div>
 <div class="tnav"><button class="tb on" onclick="go('form')">Feedback Form</button><button class="tb" onclick="go('qr')">QR Code</button></div></div>
 <div class="pg on" id="pg-form">
 <div class="hero"><h2>Training Satisfaction Survey</h2><p>Your feedback helps us improve our L&amp;D programs</p></div>
-<div class="sw"><span class="sico">&#128269;</span><input type="text" id="srch" placeholder="Type your name or employee code..." autocomplete="off"><div id="drp"></div></div>
-<div class="selbox" id="selbox"><div class="sav" id="selav"></div><div><div class="sn" id="selnm"></div><div class="sd" id="seldp"></div></div><div class="sc" id="selcd"></div></div>
+<p style="font-size:11px;color:#64748b;text-align:center;margin-bottom:14px;background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.15);border-radius:8px;padding:8px 12px;">&#128274; Data is used for L&amp;D improvement purposes only</p><p style="font-size:11px;color:#64748b;text-align:center;margin-bottom:14px;background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.15);border-radius:8px;padding:8px 12px;">&#128274; Data is used for L&D improvement purposes only</p><div class="sw"><span class="sico">&#128269;</span><input type="text" id="srch" placeholder="Type your name or employee code..." autocomplete="off"><div id="drp"></div></div>
+<div class="selbox" id="selbox"><div class="sav" id="selav"></div><div><div class="sn" id="selnm"></div><div class="sd" id="seldp"></div></div><div class="sc" id="selcd" style="display:none;"></div></div>
 <div class="flds">
 <div class="fg"><label>Employee Name</label><input type="text" id="fn" readonly placeholder="Auto-filled"></div>
-<div class="fg"><label>Employee Code</label><input type="text" id="fc" readonly placeholder="Auto-filled"></div>
+<input type="hidden" id="fc">
 <div class="fg"><label>Department</label><input type="text" id="fd" readonly placeholder="Auto-filled"></div>
 <div class="sdv">Training Details</div>
 <div class="fg"><label>Session Name</label><input type="text" id="fsession" placeholder="e.g. Induction Day 1 – 4th Floor" maxlength="100"></div>
@@ -86,7 +86,7 @@
 </div>
 <div class="okbanner" id="okbanner"><div class="ck">&#10003;</div><h3>Feedback Submitted!</h3><p>Thank you! Your training feedback has been recorded successfully.</p></div>
 </div>
-<div class="pg" id="pg-qr"><div class="qrw"><div class="qrbox"><h2>Unified QR Code</h2><p>One QR code for all Samana employees.<br>Scan, search your name, and fill the form.</p>
+<div class="pg" id="pg-qr"><div class="qrw"><div class="qrbox"><h2>Unified QR Code</h2><p>One QR code for all employees.<br>Scan, search your name, and fill the form.</p>
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://nehalessam3698-alt.github.io/ld-feedback/" alt="QR">
 <div class="urlbx">https://nehalessam3698-alt.github.io/ld-feedback/</div>
 <button class="qrbtn" onclick="dlQR()">Download QR Code</button>
@@ -183,7 +183,7 @@ function pick(code){
   document.getElementById("drp").style.display="none";
   document.getElementById("fn").value=e.name;document.getElementById("fc").value=e.Code;document.getElementById("fd").value=e.dept;
   document.getElementById("selav").textContent=e.name.charAt(0);
-  document.getElementById("selnm").textContent=e.name;document.getElementById("seldp").textContent=e.dept;document.getElementById("selcd").textContent=e.Code;
+  document.getElementById("selnm").textContent=e.name;document.getElementById("seldp").textContent=e.dept;
   document.getElementById("selbox").className="selbox on";
 }
 
