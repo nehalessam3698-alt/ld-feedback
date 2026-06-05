@@ -193,7 +193,7 @@ document.getElementById("srch").addEventListener("input",function(){
   if(!q){dd.style.display="none";return;}
   var m=[];for(var i=0;i<EMP.length;i++){if(EMP[i].name.toLowerCase().indexOf(q)>=0||EMP[i].Code.indexOf(q)>=0){m.push(EMP[i]);if(m.length>=12)break;}}
   if(!m.length){dd.style.display="none";return;}
-  var h="";for(var j=0;j<m.length;j++){var e=m[j];h+="<div class='dri' onclick='pick(\""+e.Code+"\")'><div class='dav'>"+e.name.charAt(0)+"</div><div><div class='dn'>"+e.name+"</div><div class='dm'>"+e.Code+" - "+e.dept.substring(0,30)+"</div></div></div>";}
+  var h="";for(var j=0;j<m.length;j++){var e=m[j];h+="<div class='dri' onclick='pick(\""+e.Code+"\")'><div class='dav'>"+e.name.charAt(0)+"</div><div><div class='dn'>"+e.name+"</div><div class='dm'>"+e.dept.substring(0,35)+"</div></div></div>";}
   dd.innerHTML=h;dd.style.display="block";
 });
 document.addEventListener("click",function(ev){if(!ev.target.closest(".sw"))document.getElementById("drp").style.display="none";});
