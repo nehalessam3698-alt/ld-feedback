@@ -70,7 +70,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .flds{display:grid;gap:18px;}
 .fg label{display:block;font-size:10px;font-weight:500;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.6px;}
 .fg input,.fg select{width:100%;padding:11px 13px;background:var(--white);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:'Inter',sans-serif;font-size:13px;outline:none;transition:border .2s;}
-.fg input:focus,.fg select:focus{border-color:var(--gold);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);}
 .fg input[readonly]{background:var(--bg);color:var(--muted);}
 .fg select option{background:var(--white);}
 
@@ -209,6 +209,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       <div class="slbl" id="sl4"></div>
     </div>
 
+    <div class="fg"><label>Additional Comments (optional)</label>
+      <textarea id="fcomment" placeholder="Share any feedback, suggestions, or comments about the session..." maxlength="500" rows="3" style="width:100%;padding:11px 13px;background:var(--white);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:'Inter',sans-serif;font-size:13px;outline:none;resize:vertical;transition:border .2s;"></textarea>
+    </div>
+
     <input type="text" id="_hp" name="_hp" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off"><div class="errmsg" id="errmsg"></div>
     <button class="subbtn" id="subbtn" onclick="doSubmit()">Submit Feedback</button>
   </div>
@@ -330,6 +334,7 @@ function doSubmit(){
     trainer:document.getElementById("ft").value,
     method:document.getElementById("fm").value,
     overall:RR[0],trainerRating:RR[1],content:RR[2],materials:RR[3],pace:RR[4],
+    comment:document.getElementById("fcomment").value.trim(),
     _t:Date.now() // timestamp for validation
   };
 
@@ -346,7 +351,7 @@ function done(btn){
   btn.textContent="Submit Feedback";
   setTimeout(function(){
     ob.className="okbanner";btn.disabled=false;emp=null;
-    ["fsession","fp","ft","fm"].forEach(function(id){document.getElementById(id).value="";});
+    ["fsession","fp","ft","fm","fcomment"].forEach(function(id){document.getElementById(id).value="";});
     document.getElementById("srch").value="";document.getElementById("selbox").className="selbox";
     RR=[0,0,0,0,0];document.querySelectorAll(".star").forEach(function(s){s.className="star";});
     for(var i=0;i<5;i++){var l=document.getElementById("sl"+i);if(l)l.textContent="";}
