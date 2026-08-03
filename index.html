@@ -351,7 +351,7 @@ function doSubmit(){
   if(!document.getElementById("fp").value){showErr("Please select a Training Program.");return;}
   if(!document.getElementById("ft").value){showErr("Please select a Trainer.");return;}
   if(!document.getElementById("fm").value){showErr("Please select a Delivery Method.");return;}
-  for(var i=0;i<5;i++){if(!RR[i]){showErr("Please complete all star ratings.");return;}}
+  for(var i=0;i<4;i++){if(!RR[i]){showErr("Please complete all star ratings.");return;}}
 
   var btn=document.getElementById("subbtn");
   btn.disabled=true;btn.textContent="Submitting...";
