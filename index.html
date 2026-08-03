@@ -220,8 +220,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
     </div>
     
     <div class="fg"><label>Pace &amp; Duration *</label>
-      <div class="stars" id="st4"><span class="star" onclick="rt(4,1)">&#11088;</span><span class="star" onclick="rt(4,2)">&#11088;</span><span class="star" onclick="rt(4,3)">&#11088;</span><span class="star" onclick="rt(4,4)">&#11088;</span><span class="star" onclick="rt(4,5)">&#11088;</span></div>
-      <div class="slbl" id="sl4"></div>
+      <div class="stars" id="st3"><span class="star" onclick="rt(3,1)">&#11088;</span><span class="star" onclick="rt(3,2)">&#11088;</span><span class="star" onclick="rt(3,3)">&#11088;</span><span class="star" onclick="rt(3,4)">&#11088;</span><span class="star" onclick="rt(3,5)">&#11088;</span></div>
+      <div class="slbl" id="sl3"></div>
     </div>
 
     <div class="fg"><label>Additional Comments (optional)</label>
@@ -393,7 +393,7 @@ function done(btn){
     ["fsession","fp","ft","fm","fcomment","manual-name","manual-dept"].forEach(function(id){document.getElementById(id).value="";});
     document.getElementById("srch").value="";document.getElementById("selbox").className="selbox";
     RR=[0,0,0,0,0];document.querySelectorAll(".star").forEach(function(s){s.className="star";});
-    for(var i=0;i<5;i++){var l=document.getElementById("sl"+i);if(l)l.textContent="";}
+    for(var i=0;i<4;i++){var l=document.getElementById("sl"+i);if(l)l.textContent="";}
   },4000);
 }
 
