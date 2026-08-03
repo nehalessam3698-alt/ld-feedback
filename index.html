@@ -7,15 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#FAFAF8;
+  --bg:#FFFFFF;
   --white:#FFFFFF;
   --gold:#C9A84C;
-  --gold-light:#E8D5A3;
-  --gold-pale:#F7F0DC;
+  --blue:#1F3864;
+  --gold-light:#C5D3E8;
+  --gold-pale:#EEF2FA;
   --text:#1A1A1A;
   --muted:#6B6B6B;
-  --border:#E8E0CC;
-  --border-light:#F0EAD8;
+  --border:#D8E0EC;
+  --border-light:#EEF2FA;
   --error:#C0392B;
   --green:#2E7D5E;
 }
@@ -31,7 +32,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .logo-text p{font-size:10px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-top:1px;}
 .tnav{display:flex;gap:2px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:3px;}
 .tb{padding:6px 16px;border:none;border-radius:4px;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;cursor:pointer;color:var(--muted);background:transparent;letter-spacing:.3px;transition:all .2s;}
-.tb.on{background:var(--gold);color:var(--white);}
+.tb.on{background:#1F3864;color:var(--white);}
 
 /* PAGES */
 .pg{display:none;padding:32px;max-width:620px;margin:0 auto;}
@@ -39,12 +40,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 
 /* HERO */
 .hero{text-align:center;padding:40px 24px 32px;border-bottom:1px solid var(--border-light);margin-bottom:28px;}
-.hero-line{width:32px;height:1.5px;background:var(--gold);margin:0 auto 16px;}
+.hero-line{width:32px;height:1.5px;background:#1F3864;margin:0 auto 16px;}
 .hero h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--text);letter-spacing:.5px;}
 .hero p{color:var(--muted);font-size:12px;margin-top:6px;line-height:1.6;}
 .privacy-note{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:10px;color:var(--muted);letter-spacing:.3px;text-transform:uppercase;}
-.privacy-note::before{content:'';width:14px;height:1px;background:var(--gold);}
-.privacy-note::after{content:'';width:14px;height:1px;background:var(--gold);}
+.privacy-note::before{content:'';width:14px;height:1px;background:#1F3864;}
+.privacy-note::after{content:'';width:14px;height:1px;background:#1F3864;}
 
 /* SEARCH */
 .sw{position:relative;margin-bottom:16px;}
@@ -60,9 +61,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .dm{font-size:10px;color:var(--muted);margin-top:1px;}
 
 /* SELECTED BOX */
-.selbox{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:6px;padding:12px 16px;display:none;align-items:center;gap:12px;margin-bottom:20px;}
+.selbox{background:#EEF2FA;border:1px solid #C5D3E8;border-radius:6px;padding:12px 16px;display:none;align-items:center;gap:12px;margin-bottom:20px;}
 .selbox.on{display:flex;}
-.sav{width:38px;height:38px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:var(--white);flex-shrink:0;font-family:'Cormorant Garamond',serif;}
+.sav{width:38px;height:38px;border-radius:50%;background:#1F3864;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:var(--white);flex-shrink:0;font-family:'Cormorant Garamond',serif;}
 .sn{font-size:13px;font-weight:500;color:var(--text);}
 .sd{font-size:10px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:.3px;}
 
@@ -76,7 +77,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 
 /* SECTION DIVIDER */
 .sdv{display:flex;align-items:center;gap:12px;margin:4px 0 2px;}
-.sdv span{font-size:10px;font-weight:500;color:var(--gold);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;}
+.sdv span{font-size:10px;font-weight:600;color:#1F3864;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;}
 .sdv::before,.sdv::after{content:'';flex:1;height:1px;background:var(--border);}
 .sdv::before{content:none;}
 
@@ -85,14 +86,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .star{font-size:24px;cursor:pointer;filter:grayscale(1) opacity(.25);user-select:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:transform .1s;}
 .star.on{filter:none;}
 .star:hover{transform:scale(1.1);}
-.slbl{font-size:10px;color:var(--gold);margin-top:4px;min-height:14px;font-weight:500;letter-spacing:.3px;text-transform:uppercase;}
+.slbl{font-size:10px;color:#1F3864;margin-top:4px;min-height:14px;font-weight:500;letter-spacing:.3px;text-transform:uppercase;}
 
 /* ERROR */
 .errmsg{display:none;background:#FDF2F2;border:1px solid #E8C4C4;border-radius:6px;padding:10px 14px;color:var(--error);font-size:12px;margin-bottom:8px;}
 
 /* SUBMIT */
-.subbtn{width:100%;padding:14px;background:var(--gold);border:none;border-radius:6px;color:var(--white);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:1px;text-transform:uppercase;margin-top:6px;transition:background .2s;}
-.subbtn:hover{background:#B8973D;}
+.subbtn{width:100%;padding:14px;border:none;border-radius:6px;color:var(--white);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:1px;text-transform:uppercase;margin-top:6px;transition:background .2s;}
+.subbtn:hover{background:#2a4a80;}
 .subbtn:disabled{opacity:.5;cursor:not-allowed;}
 
 /* SUCCESS */
@@ -109,8 +110,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .qrbox p{color:var(--muted);font-size:12px;margin-bottom:20px;line-height:1.6;}
 .qrbox img{width:220px;height:220px;border-radius:4px;border:1px solid var(--border);}
 .urlbx{margin-top:14px;background:var(--bg);border-radius:5px;padding:8px 12px;font-size:10px;color:var(--muted);word-break:break-all;border:1px solid var(--border);letter-spacing:.3px;}
-.qrbtn{margin-top:10px;width:100%;padding:11px;background:var(--gold);border:none;border-radius:5px;color:var(--white);font-family:'Inter',sans-serif;font-size:11px;font-weight:600;cursor:pointer;letter-spacing:1px;text-transform:uppercase;}
-.qrbtn.g{background:var(--green);margin-top:7px;}
+.qrbtn{margin-top:10px;width:100%;padding:11px;background:#1F3864;border:none;border-radius:5px;color:var(--white);font-family:'Inter',sans-serif;font-size:11px;font-weight:600;cursor:pointer;letter-spacing:1px;text-transform:uppercase;}
+.qrbtn.g{background:#2E7D5E;margin-top:7px;}
 
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
@@ -138,6 +139,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
     <div class="privacy-note">Data used for L&amp;D improvement purposes only</div>
   </div>
 
+  <p style="font-size:13px;font-weight:700;color:#1F3864;letter-spacing:.3px;margin-bottom:8px;">&#128269; Search Your Name</p>
+
   <div class="sw">
     <span class="sico">&#128269;</span>
     <input type="text" id="srch" placeholder="Search your name or employee code..." autocomplete="off">
@@ -147,6 +150,23 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
   <div class="selbox" id="selbox">
     <div class="sav" id="selav"></div>
     <div><div class="sn" id="selnm"></div><div class="sd" id="seldp"></div></div>
+  </div>
+
+  <!-- OR divider -->
+  <div style="display:flex;align-items:center;gap:12px;margin:4px 0 16px;">
+    <div style="flex:1;height:1px;background:var(--border);"></div>
+    <span style="font-size:11px;font-weight:600;color:var(--muted);letter-spacing:1px;">OR</span>
+    <div style="flex:1;height:1px;background:var(--border);"></div>
+  </div>
+
+  <!-- Manual name entry -->
+  <div id="manual-box" style="background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:6px;padding:14px 16px;margin-bottom:20px;">
+    <p style="font-size:13px;font-weight:700;color:#1F3864;letter-spacing:.3px;margin-bottom:10px;">&#9997;&#65039; Type Your Name if Not Found in Search</p>
+    <div style="display:grid;gap:10px;">
+      <input type="text" id="manual-name" placeholder="Full Name" autocomplete="off" oninput="manualEntry()" style="width:100%;padding:10px 13px;background:var(--white);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:'Inter',sans-serif;font-size:13px;outline:none;">
+      <input type="text" id="manual-dept" placeholder="Department" autocomplete="off" style="width:100%;padding:10px 13px;background:var(--white);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:'Inter',sans-serif;font-size:13px;outline:none;">
+      
+    </div>
   </div>
 
   <div class="flds">
@@ -198,10 +218,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       <div class="stars" id="st2"><span class="star" onclick="rt(2,1)">&#11088;</span><span class="star" onclick="rt(2,2)">&#11088;</span><span class="star" onclick="rt(2,3)">&#11088;</span><span class="star" onclick="rt(2,4)">&#11088;</span><span class="star" onclick="rt(2,5)">&#11088;</span></div>
       <div class="slbl" id="sl2"></div>
     </div>
-    <div class="fg"><label>Training Materials *</label>
-      <div class="stars" id="st3"><span class="star" onclick="rt(3,1)">&#11088;</span><span class="star" onclick="rt(3,2)">&#11088;</span><span class="star" onclick="rt(3,3)">&#11088;</span><span class="star" onclick="rt(3,4)">&#11088;</span><span class="star" onclick="rt(3,5)">&#11088;</span></div>
-      <div class="slbl" id="sl3"></div>
-    </div>
+    
     <div class="fg"><label>Pace &amp; Duration *</label>
       <div class="stars" id="st4"><span class="star" onclick="rt(4,1)">&#11088;</span><span class="star" onclick="rt(4,2)">&#11088;</span><span class="star" onclick="rt(4,3)">&#11088;</span><span class="star" onclick="rt(4,4)">&#11088;</span><span class="star" onclick="rt(4,5)">&#11088;</span></div>
       <div class="slbl" id="sl4"></div>
@@ -255,7 +272,7 @@ function _de(){
 
 var EMP=_de();
 var SU=_du();
-var RR=[0,0,0,0,0],emp=null;
+var RR=[0,0,0,0],emp=null;
 var SL={1:"Poor",2:"Fair",3:"Good",4:"Very Good",5:"Excellent"};
 var _sc=0; // submission count per session
 var _st=0; // session start time
@@ -296,6 +313,20 @@ function showErr(msg){
   setTimeout(function(){e.style.display="none";},4000);
 }
 
+function manualEntry(){
+  var name = document.getElementById("manual-name").value.trim();
+  var dept = document.getElementById("manual-dept").value.trim();
+  if(name){
+    // Clear search selection if manual is being used
+    emp = null;
+    document.getElementById("srch").value = "";
+    document.getElementById("selbox").className = "selbox";
+    document.getElementById("fn").value = name;
+    document.getElementById("fc").value = "NA";
+    document.getElementById("fd").value = dept || "—";
+  }
+}
+
 function doSubmit(){
   // Rate limiting - max 3 submissions per session, 60s between submissions
   var now=Date.now();
@@ -308,7 +339,14 @@ function doSubmit(){
   var hp=document.getElementById("_hp");
   if(hp&&hp.value!=""){return;} // bot detected - silent fail
 
-  if(!emp){showErr("Please search and select your name.");return;}
+  var manualName = document.getElementById("manual-name").value.trim();
+  if(!emp && !manualName){showErr("Please search and select your name, or type it manually below.");return;}
+  // If manual entry used, set the data
+  if(!emp && manualName){
+    document.getElementById("fn").value = manualName;
+    document.getElementById("fc").value = "NA";
+    document.getElementById("fd").value = document.getElementById("manual-dept").value.trim() || "—";
+  }
   if(!document.getElementById("fsession").value.trim()){showErr("Please enter the Session Name.");return;}
   if(!document.getElementById("fp").value){showErr("Please select a Training Program.");return;}
   if(!document.getElementById("ft").value){showErr("Please select a Trainer.");return;}
@@ -326,12 +364,15 @@ function doSubmit(){
   var mn=String(now2.getMinutes()).padStart(2,'0');
   var ts=dd+'/'+mm+'/'+yy+' '+hh+':'+mn;
 
-  var d={time:ts,name:emp.name,code:emp.Code,dept:emp.dept,
+  var d={time:ts,
+    name:document.getElementById("fn").value||emp&&emp.name||"",
+    code:document.getElementById("fc").value||emp&&emp.Code||"NA",
+    dept:document.getElementById("fd").value||emp&&emp.dept||"",
     session:document.getElementById("fsession").value.trim(),
     program:document.getElementById("fp").value,
     trainer:document.getElementById("ft").value,
     method:document.getElementById("fm").value,
-    overall:RR[0],trainerRating:RR[1],content:RR[2],materials:RR[3],pace:RR[4],
+    overall:RR[0],trainerRating:RR[1],content:RR[2],pace:RR[3],
     comment:document.getElementById("fcomment").value.trim(),
     _t:Date.now() // timestamp for validation
   };
@@ -349,7 +390,7 @@ function done(btn){
   btn.textContent="Submit Feedback";
   setTimeout(function(){
     ob.className="okbanner";btn.disabled=false;emp=null;
-    ["fsession","fp","ft","fm","fcomment"].forEach(function(id){document.getElementById(id).value="";});
+    ["fsession","fp","ft","fm","fcomment","manual-name","manual-dept"].forEach(function(id){document.getElementById(id).value="";});
     document.getElementById("srch").value="";document.getElementById("selbox").className="selbox";
     RR=[0,0,0,0,0];document.querySelectorAll(".star").forEach(function(s){s.className="star";});
     for(var i=0;i<5;i++){var l=document.getElementById("sl"+i);if(l)l.textContent="";}
@@ -368,6 +409,9 @@ function pick(code){
   document.getElementById("selnm").textContent=e.name;
   document.getElementById("seldp").textContent=e.dept;
   document.getElementById("selbox").className="selbox on";
+  // Clear manual entry if search is used
+  document.getElementById("manual-name").value="";
+  document.getElementById("manual-dept").value="";
 }
 
 document.getElementById("srch").addEventListener("input",function(){
