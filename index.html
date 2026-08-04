@@ -94,9 +94,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .errmsg{display:none;background:#FDF2F2;border:1px solid #E8C4C4;border-radius:6px;padding:10px 14px;color:var(--error);font-size:12px;margin-bottom:8px;}
 
 /* SUBMIT */
-.subbtn{width:100%;padding:16px;border:none;border-radius:6px;color:var(--white);font-family:'Inter',sans-serif;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:1.5px;text-transform:uppercase;margin-top:10px;transition:all .2s;box-shadow:0 4px 12px rgba(31,56,100,.25);}
-.subbtn:hover{background:#2a4a80;}
-.subbtn:disabled{opacity:.5;cursor:not-allowed;}
+.subbtn{width:100%;padding:18px;border:none;border-radius:8px;color:#FFFFFF;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:2px;text-transform:uppercase;margin-top:14px;transition:all .2s;background:#1F3864;box-shadow:0 6px 20px rgba(31,56,100,.4);position:sticky;bottom:16px;}
+.subbtn:hover{background:#2a4a80;box-shadow:0 8px 24px rgba(31,56,100,.5);transform:translateY(-1px);}
+.subbtn:disabled{background:#8a9bb5;box-shadow:none;cursor:not-allowed;transform:none;}
 
 /* SUCCESS */
 .okbanner{display:none;text-align:center;padding:40px 20px;border:2px solid #1F3864;border-radius:8px;background:#EEF2FA;margin-top:14px;}
@@ -231,7 +231,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
     </div>
 
     <input type="text" id="_hp" name="_hp" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off"><div class="errmsg" id="errmsg"></div>
-    <button class="subbtn" id="subbtn" onclick="doSubmit()">Submit Feedback</button>
+    <button class="subbtn" id="subbtn" onclick="doSubmit()">&#9654; Submit My Feedback</button>
   </div>
 
   <div class="okbanner" id="okbanner">
